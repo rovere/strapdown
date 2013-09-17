@@ -400,9 +400,9 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
 
   // Insert navbar if there's none
   var newNode = document.createElement('div');
-  newNode.className = 'navbar navbar-fixed-top';
+  newNode.className = 'navbar navbar-default navbar-fixed-top';
   if (!navbarEl && titleEl) {
-    newNode.innerHTML = '<div class="navbar-inner"> <div class="container"> <div id="headline" class="brand"> </div> </div> </div>';
+    newNode.innerHTML = '<div class="navbar-inner"> <div class="container"> <div id="headline" class="brand navbar-brand"> </div> </div> </div>';
     document.body.insertBefore(newNode, document.body.firstChild);
     var title = titleEl.innerHTML;
     var headlineEl = document.getElementById('headline');
