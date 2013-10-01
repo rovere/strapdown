@@ -119,9 +119,9 @@ return this.inline.output(body);};Parser.prototype.tok=function(){switch(this.to
 case'hr':{return'<hr>\n';}
 case'heading':{return'<h'
 +this.token.depth
-+'>'
++'><a name="'+this.token.text.toLowerCase().replace(/[^\w]+/g, '-')+'">'
 +this.inline.output(this.token.text)
-+'</h'
++'</a></h'
 +this.token.depth
 +'>\n';}
 case'code':{if(this.options.highlight){var code=this.options.highlight(this.token.text,this.token.lang);if(code!=null&&code!==this.token.text){this.token.escaped=true;this.token.text=code;}}
